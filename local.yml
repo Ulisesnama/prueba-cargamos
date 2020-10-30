@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+    postgres:
+        image: "postgres:latest"
+        env_file:
+            - ./.envs/.postgres
+        networks:
+            - db_nw
+    flask:
+        build:
+            context: .
+            dockerfile: ./compose/flask/Dockerfile
+        volumes:
+            - .:/app
+        env_file:
+            - ./.envs/.flask
+            - ./.envs/.postgres
+        ports:
+            - "5000:5000"
+        image: cargamos_api
+        networks:
+            - db_nw
+        
+networks:
+    db_nw:
+        driver: bridge

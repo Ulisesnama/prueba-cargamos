@@ -1,0 +1,11 @@
+# Flask
+flask
+
+# Flask REST
+flask-restful
+flask-restplus
+Werkzeug==0.16.1
+
+# database
+flask-sqlalchemy
+psycopg2

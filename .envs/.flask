@@ -1,0 +1,6 @@
+# Flask
+FLASK_APP=app.py
+FLASK_DEBUG=1
+FLASK_ENV=development
+FLASK_RUN_HOST=0.0.0.0
+SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://test:test@db/test
